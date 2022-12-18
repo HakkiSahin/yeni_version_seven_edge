@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
 
     [SerializeField] private GameObject losePanel;
+    [SerializeField] private GameObject canvas;
 
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private float time;
@@ -83,10 +84,15 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         if (!isPause) TimeMethod();
-            
+
         moveDirection = GetMoveDirection();
         Walking();
         GroundRaycast();
+
+        if (!canvas.activeInHierarchy)
+        {
+            canvas.SetActive(true);
+        }
     }
 
     void TimeMethod()
@@ -182,7 +188,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!IsRunning())
         {
-            _playerTrigger.Energy(Time.deltaTime / 35f);
+            _playerTrigger.Energy(Time.deltaTime / 80f);
         }
 
         if (IsRunning() && !isCrouching && !isSliding)
@@ -206,7 +212,7 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = new Vector3(0, currentAngle, 0);
 
             rb.velocity = new Vector3(transform.forward.x * moveSpeed, rb.velocity.y, transform.forward.z * moveSpeed);
-            _playerTrigger.Energy(Time.deltaTime / (15f - (isRun ? 5f : 0)));
+            _playerTrigger.Energy(Time.deltaTime / (60 - (isRun ? 15 : 0)));
         }
         else
         {

@@ -41,9 +41,9 @@ public class ButtonHandler : MonoBehaviour
 
             case ButtonType.Out:
                 PlayerController.Instance.OutVechicle();
-                transform.parent.parent.GetChild(0).gameObject.SetActive(true);
-                transform.parent.gameObject.SetActive(false);
-                transform.parent.parent.gameObject.SetActive(false);
+                pauseMenu.transform.GetChild(0).gameObject.SetActive(true);
+                pauseMenu.transform.GetChild(1).gameObject.SetActive(false);
+                pauseMenu.SetActive(false);
                 break;
 
             case ButtonType.Run:

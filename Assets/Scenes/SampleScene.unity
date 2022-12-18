@@ -2044,7 +2044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e4e274d84f1b94ba09af96d3cfe763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 4
+  buttonType: 5
   pauseMenu: {fileID: 0}
 --- !u!114 &636944071
 MonoBehaviour:
@@ -3197,7 +3197,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.20164506, y: -0.00000001685294, z: 0.0000000034695824, w: 0.9794587}
+  m_LocalRotation: {x: 0.20164506, y: 0.000000016852937, z: -0.0000000034695815, w: 0.9794587}
   m_LocalPosition: {x: -10.5, y: 5.792, z: -29.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3637,7 +3637,8 @@ MonoBehaviour:
   jumpAmount: 3
   isCrouching: 0
   isRun: 0
-  losePanel: {fileID: 0}
+  losePanel: {fileID: 1537043299}
+  canvas: {fileID: 157587707}
   timeText: {fileID: 1142358556}
   time: 200
   cars:
@@ -3708,7 +3709,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078406527}
-  m_LocalRotation: {x: 0.20164506, y: -0.00000001685294, z: 0.0000000034695824, w: 0.9794587}
+  m_LocalRotation: {x: 0.20164506, y: 0.000000016852937, z: -0.0000000034695815, w: 0.9794587}
   m_LocalPosition: {x: -9.93537, y: 22.306688, z: -8.299999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6595,7 +6596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 4
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 1717047759}
 --- !u!114 &1868904287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31115,6 +31116,7 @@ GameObject:
   - component: {fileID: 4348689835653623056}
   - component: {fileID: 8715087776263422922}
   - component: {fileID: 1412035364592472735}
+  - component: {fileID: 8715087776263422923}
   m_Layer: 0
   m_Name: ca
   m_TagString: Untagged
@@ -76676,6 +76678,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2909033673925408998}
   m_Mesh: {fileID: 325224899638576143, guid: 0f02d419fa189e944b18eb3e545ee6be, type: 3}
+--- !u!65 &8715087776263422923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909033673925408998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11183236, y: 0.11239309, z: 0.07491861}
+  m_Center: {x: -0.019962491, y: -0.0003285128, z: -0.009798666}
 --- !u!23 &8715479565901847067
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -6,7 +6,6 @@ public class SkillsButton : MonoBehaviour
 
     public void PlayTriggerAnim(string name)
     {
-        Debug.Log(name);
         animator.SetTrigger(name);
     }
 }

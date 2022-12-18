@@ -23,6 +23,6 @@ public class SceneTransition : MonoBehaviour
     private IEnumerator CloseScene()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }
