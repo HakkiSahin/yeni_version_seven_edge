@@ -13,11 +13,13 @@ public class PlayerTrigger : MonoBehaviour
     {
         if (other.tag == "collectableClothes")
         {
+            AudioController._instance.ClothVoice();
             CollectClothes(other.gameObject);
             HideCollactable(other.gameObject);
         }
         else if (other.tag == "collectableFruits")
         {
+            AudioController._instance.CollectableVoice();
             CollectFruits(fillAmount);
             HideCollactable(other.gameObject);
         }
